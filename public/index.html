@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcomepage</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body{
+            background-color: black;
+            /* z-index:-2; */
+            overflow-x: hidden;
+            
+        }
+
+
+        #welcomepage {
+            height: 100vh;
+            width: 100vw;
+            /* background-color: black; */
+            /* background:linear-gradient(to right,rgb(241, 243, 240),rgb(26, 33, 36)); */
+
+        }
+
+        /* #welcomeimage {
+            height: 100%;
+            width: 100%;
+        } */
+
+        .mt10 {
+            margin-top:10rem;
+        }
+
+        .mt10{
+            margin-top:10rem;
+        }
+        .mb10{
+            margin-bottom:10rem;
+        }
+
+        .imgbox {
+            height: 100vh;
+            width: 100%;
+            background-image: url("/public/image1.png");
+
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .boxes{
+            animation-name:floatingbox;
+            animation-duration:10s;
+            animation-iteration-count: infinite;
+            animation-direction:alternate;
+            animation-timing-function: linear;
+            width:100px;
+            height:100px;
+            box-shadow:2px 0px 10px 2px white;
+            background-color:lightblue;
+            position: absolute;
+            left:10%;
+           
+            z-index:-1;            
+        }
+        #first{
+            top:105%;
+            left:0%;
+            width:170px;
+            height:170px;
+            opacity:1;
+        }
+        #second{
+            top:110%;
+            left:17%;
+            width:70px;
+            height:70px;
+            background-color:lightpink;
+        }
+        #third{
+            left:24%;
+            top:130%;
+            width:120px;
+            height:120px;
+            border-radius:50%;
+            background-color:lightgreen;
+        }
+        #forth{
+            left:41%;
+            top:140%;
+            width:130px;
+            height:130px;
+            background-color: lightsalmon;
+        }
+
+        @keyframes floatingbox{
+            /* 0% {top:75%; transform:rotateX(20,'angle');}
+            25% { top:50%; transform:rotateX(34,'angle');}
+            50% { top:25%; transform:rotateX(34,'angle');}
+            100% { top:0%; transform:rotateX(34,'angle');} */
+            0% {top:200%; transform:rotate(30deg);}
+            0% {top:75%; transform:rotate(60deg);}
+            0% {top:50%; transform:rotate(90deg);}
+            0% {top:-20%; transform:rotate(120deg);}
+           
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <section id="welcomepage">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 order-md-0 order-1 d-flex align-items-center justify-content-center mt-md-0 mb-md-0 mt10 mb10" id="leftpage">
+                    <div class="card choicebox w-75 ">
+
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-info" data-toggle="modal"
+                            data-target="#exampleModalCenter">PREREQUISITE</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                   
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">PREREQUISITE</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class=" prequiste bg-light w-65 " id="preto">
+                                            <p>
+                                            <div class="collapse  prerequisitetHeader text-center bg-dark">PREREQUISITE</div>
+                                            <div class="collapse  prerequisitetHeader text-center">PREREQUISITE</div>
+                                            <ul>
+                                                <li>Make sure you have installed compiler for your code language</li>
+                                                <li>For C++ <a href="https://sourceforge.net/projects/mingw/"
+                                                        target="_blank">MINGW</a></li>
+                                                <li>For JAVA <a
+                                                        href="https://www.oracle.com/in/java/technologies/downloads/"
+                                                        target="_blank">JDK</a></li>
+                                                <li>For PAYTHON <a href="https://www.python.org/downloads/"
+                                                        target="_blank">CPYTHON</a></li>
+                                            </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-around mt-5 mb-5">
+                            <div class="path "><a href="../backend.html" class="btn btn-info me-4">Code Compiler</a></div>
+                            <div class="path"><a href="../frontend.html" class="btn btn-info">Code Editor</a></div>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="col-md-6 order-md-1 order-0 mt-md-0 mb-5">
+                    <div class="imgbox d-flex">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="boxes" id="first"> </div>
+        <div class="boxes" id="second"> </div>
+        <div class="boxes" id="third"> </div>
+        <div class="boxes" id="forth"> </div>
+    </section>
+</body>
+
+</html>
